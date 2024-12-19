@@ -20,7 +20,7 @@ use Illuminate\Pagination\Paginator;
  */
 class Builder extends EloquentBuilder
 {
-    public function paginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page = null)
+    public function paginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page = null, $total = null)
     {
         $page = $page ?: Paginator::resolveCurrentPage($pageName);
 
